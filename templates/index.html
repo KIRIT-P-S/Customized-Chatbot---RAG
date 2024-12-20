@@ -1,0 +1,24 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Application using Gemini Pro</title>
+</head>
+<body>
+    <h1>RAG Application using Gemini Pro</h1>
+    <form action="/" method="POST">
+        <label for="query">Ask me anything:</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <div id="response">
+        {% if answer %}
+            <h2>Answer:</h2>
+            <p>{{ answer }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
